@@ -69,6 +69,8 @@ def do_clean
       FileUtils.rm_rf(dir, verbose: true)
       FileUtils.rmdir(dir.parent, parents: true, verbose: true)
     }
+
+    FileUtils.rm_rf(root + 'ports' + 'archives', verbose: true)
   end
 
   exit! 0
