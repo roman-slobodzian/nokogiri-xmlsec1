@@ -18,6 +18,43 @@ def asplode(lib)
   abort "-----\n#{lib} is missing."
 end
 
+def do_help
+  print <<HELP
+usage: ruby #{$0} [options]
+
+    --disable-clean
+        Do not clean out intermediate files after successful build.
+
+    --disable-static
+        Do not statically link bundled libraries.
+
+    --with-iconv-dir=DIR
+        Use the iconv library placed under DIR.
+
+    --with-zlib-dir=DIR
+        Use the zlib library placed under DIR.
+
+    --use-system-libraries
+        Use system libraries intead of building and using the bundled
+        libraries.
+
+    --with-xmlsec1-dir=DIR / --with-xmlsec1-config=CONFIG
+    --with-xml2-dir=DIR / --with-xml2-config=CONFIG
+    --with-xslt-dir=DIR / --with-xslt-config=CONFIG
+    --with-exslt-dir=DIR / --with-exslt-config=CONFIG
+        Use xmlsec1/libxml2/libxslt/libexslt as specified.
+
+    --enable-cross-build
+        Do cross-build.
+HELP
+  exit! 0
+end
+
+def do_clean
+
+  exit! 0
+end
+
 def preserving_globals
   values = [
     $arg_config,
@@ -202,6 +239,13 @@ end
 
 ################################################################################
 # main
+
+case
+when arg_config('--help')
+  do_help
+when arg_config('--clean')
+  do_clean
+end
 
 RbConfig::MAKEFILE_CONFIG['CC'] = ENV['CC'] if ENV['CC']
 
@@ -433,5 +477,17 @@ xmlsec1_crypto_lib = `sh #{xmlsec1_config} --crypto`.strip
 }
 
 create_makefile('nokogiri_ext_xmlsec')
+
+if enable_config('clean', true)
+  # Do not clean if run in a development work tree.
+  File.open('Makefile', 'at') { |mk|
+    mk.print <<EOF
+all: clean-ports
+
+clean-ports: $(DLLIB)
+	-$(Q)$(RUBY) $(srcdir)/extconf.rb --clean --#{static_p ? 'enable' : 'disable'}-static
+EOF
+  }
+end
 
 # :startdoc:
