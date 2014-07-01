@@ -123,7 +123,7 @@ First of all, **thank you** for wanting to help and reading this!
 4. Check that the tests pass - `bundle exec rake`
 5. Commit your changes - `git commit -am "Added some magic"`
 6. Push the branch to Github - `git push origin adding_magic`
-7. Send a [pull request](https://help.github.com/articles/using-pull-requests)! :heart: :sparkling_heart: :heart
+7. Send a [pull request](https://help.github.com/articles/using-pull-requests)! :heart: :sparkling_heart: :heart:
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
