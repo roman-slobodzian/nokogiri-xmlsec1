@@ -49,7 +49,7 @@ describe Nokogiri::XML do
         it { expect(subject.verify_with(certs: [fixture('cert/server.crt')])).to eq(true) }
         it { expect(subject.verify_with(certificates: [fixture('cert/server.crt')])).to eq(true) }
 
-        it 'verifies using system certificates' do
+        xit 'verifies using system certificates' do
           expect { subject.verify_signature }.not_to raise_error, <<-sys_certs_error
             Could not use system certificates to verify the signature.
             Note that this may not be a failing spec. You should copy
