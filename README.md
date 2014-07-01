@@ -1,10 +1,12 @@
 # nokogiri-xmlsec1
 
-This is a fork of nokogiri-xmlsec.
-Adds support to Ruby for encrypting, decrypting, signing and validating
+This is a fork of nokogiri-xmlsec. This fork uses mini_portile to improve code
+predictiveness and allow heroku deploys.
+
+This gem adds support to Ruby for encrypting, decrypting, signing and validating
 the signatures of XML documents, according to the [XML Encryption Syntax and
 Processing](http://www.w3.org/TR/xmlenc-core/) standard, by wrapping around the
-[xmlsec](http://www.aleksey.com/xmlsec) C library and adding relevant methods
+[xmlsec1](http://www.aleksey.com/xmlsec) C library and adding relevant methods
 to `Nokogiri::XML::Document`.
 
 ## Installation
@@ -124,11 +126,6 @@ First of all, **thank you** for wanting to help and reading this!
 5. Commit your changes - `git commit -am "Added some magic"`
 6. Push the branch to Github - `git push origin adding_magic`
 7. Send a [pull request](https://help.github.com/articles/using-pull-requests)! :heart: :sparkling_heart: :heart:
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
 
 ## License
 

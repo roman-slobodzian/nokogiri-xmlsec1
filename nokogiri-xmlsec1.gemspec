@@ -8,12 +8,13 @@ Gem::Specification.new do |spec|
   spec.version       = Xmlsec::VERSION
   spec.authors       = ["Renan Mendes Carvalho"]
   spec.email         = ["aitherios@gmail.com"]
-  spec.description   = %q{This is a fork of nokogiri-xmlsec.
-    Adds support to Ruby for encrypting, decrypting,
-    signing and validating the signatures of XML documents, according to the
-    [XML Encryption Syntax and Processing](http://www.w3.org/TR/xmlenc-core/)
-    standard, by wrapping around the [xmlsec](http://www.aleksey.com/xmlsec) C
-    library and adding relevant methods to `Nokogiri::XML::Document`.}
+  spec.description   = %q{This is a fork of nokogiri-xmlsec. 
+    This fork uses mini_portile to improve code predictiveness and allow heroku deploys.
+    This gem adds support to Ruby for encrypting, decrypting, signing and validating
+    the signatures of XML documents, according to the [XML Encryption Syntax and
+    Processing](http://www.w3.org/TR/xmlenc-core/) standard, by wrapping around the
+    [xmlsec1](http://www.aleksey.com/xmlsec) C library and adding relevant methods
+    to `Nokogiri::XML::Document`.}    
   spec.summary       = %q{Wrapper around http://www.aleksey.com/xmlsec to
     support XML encryption, decryption, signing and signature validation in
     Ruby}
