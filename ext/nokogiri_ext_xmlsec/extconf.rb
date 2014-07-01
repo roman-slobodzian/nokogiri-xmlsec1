@@ -185,9 +185,9 @@ def process_recipe(name, version, static_p, cross_p)
     }
 
     if recipe.patch_files.empty?
-      message! "Building #{name}-#{version} for nokogiri-xmlsec.\n"
+      message! "Building #{name}-#{version} for nokogiri-xmlsec1.\n"
     else
-      message! "Building #{name}-#{version} for nokogiri-xmlsec with the following patches applied:\n"
+      message! "Building #{name}-#{version} for nokogiri-xmlsec1 with the following patches applied:\n"
 
       recipe.patch_files.each { |patch|
         message! "\t- %s\n" % File.basename(patch)
@@ -196,17 +196,17 @@ def process_recipe(name, version, static_p, cross_p)
 
     message! <<-"EOS"
 ************************************************************************
-IMPORTANT! nokogiri-xmlsec builds and uses a packaged version of #{name}.
+IMPORTANT! nokogiri-xmlsec1 builds and uses a packaged version of #{name}.
 
 If this is a concern for you and you want to use the system library
-instead, abort this installation process and reinstall nokogiri-xmlsec
+instead, abort this installation process and reinstall nokogiri-xmlsec1
 as follows:
 
-    gem install nokogiri-xmlsec -- --use-system-libraries
+    gem install nokogiri-xmlsec1 -- --use-system-libraries
 
 If you are using Bundler, tell it to use the option:
 
-    bundle config build.nokogiri-xmlsec --use-system-libraries
+    bundle config build.nokogiri-xmlsec1 --use-system-libraries
     bundle install
 ************************************************************************
     EOS
@@ -275,7 +275,7 @@ end
 
 case
 when arg_config('--use-system-libraries', !!ENV['NOKOGIRI_XMLSEC_USE_SYSTEM_LIBRARIES'])
-  message! "Building nokogiri-xmlsec using system libraries.\n"
+  message! "Building nokogiri-xmlsec1 using system libraries.\n"
 
   dir_config('zlib')
 
@@ -303,7 +303,7 @@ when arg_config('--use-system-libraries', !!ENV['NOKOGIRI_XMLSEC_USE_SYSTEM_LIBR
 #endif
   SRC
 else
-  message! "Building nokogiri-xmlsec using packaged libraries.\n"
+  message! "Building nokogiri-xmlsec1 using packaged libraries.\n"
 
   require 'mini_portile'
   monkey_patch_mini_portile

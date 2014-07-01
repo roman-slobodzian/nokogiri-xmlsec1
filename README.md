@@ -1,5 +1,6 @@
-# nokogiri-xmlsec
+# nokogiri-xmlsec1
 
+This is a fork of nokogiri-xmlsec.
 Adds support to Ruby for encrypting, decrypting, signing and validating
 the signatures of XML documents, according to the [XML Encryption Syntax and
 Processing](http://www.w3.org/TR/xmlenc-core/) standard, by wrapping around the
@@ -10,7 +11,7 @@ to `Nokogiri::XML::Document`.
 
 Add this line to your application's Gemfile:
 
-    gem 'nokogiri-xmlsec'
+    gem 'nokogiri-xmlsec1'
 
 And then execute:
 
@@ -18,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nokogiri-xmlsec
+    $ gem install nokogiri-xmlsec1
 
 ## Usage
 
@@ -110,12 +111,25 @@ immediate plan to resolve. This is probably because I haven't needed the
 functionality, and no one has sent a pull request. (Hint, hint!)
 
 - Currently, it is not possible to operate on individual XML nodes. The
-  `nokogiri-xmlsec` operations must be performed on the entire document.
+  `nokogiri-xmlsec1` operations must be performed on the entire document.
 
 ## Contributing
 
+First of all, **thank you** for wanting to help and reading this!
+
+1. [Fork the project](https://help.github.com/articles/fork-a-repo).
+2. Create a feature branch - `git checkout -b adding_magic`
+3. Add some tests, and make your changes!
+4. Check that the tests pass - `bundle exec rake`
+5. Commit your changes - `git commit -am "Added some magic"`
+6. Push the branch to Github - `git push origin adding_magic`
+7. Send a [pull request](https://help.github.com/articles/using-pull-requests)! :heart: :sparkling_heart: :heart
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+MIT. See [LICENSE.txt](LICENSE.txt) for further details.
