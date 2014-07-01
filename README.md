@@ -114,6 +114,7 @@ functionality, and no one has sent a pull request. (Hint, hint!)
 
 - Currently, it is not possible to operate on individual XML nodes. The
   `nokogiri-xmlsec1` operations must be performed on the entire document.
+- Support for jruby and rubinius.
 
 ## Contributing
 
