@@ -1,4 +1,7 @@
 # nokogiri-xmlsec1
+[![Gem Version](https://badge.fury.io/rb/nokogiri-xmlsec1.svg)](http://badge.fury.io/rb/nokogiri-xmlsec1)
+[![TravisCI Build Status](https://travis-ci.org/aitherios/nokogiri-xmlsec1.svg?branch=master)](https://travis-ci.org/aitherios/nokogiri-xmlsec1)
+[![Dependency Status](https://gemnasium.com/aitherios/nokogiri-xmlsec1.svg)](https://gemnasium.com/aitherios/nokogiri-xmlsec1)
 
 This is a fork of nokogiri-xmlsec. This fork uses mini_portile to improve code
 predictiveness and allow heroku deploys.
