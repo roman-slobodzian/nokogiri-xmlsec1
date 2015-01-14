@@ -1,7 +1,7 @@
 # nokogiri-xmlsec1
-[![Gem Version](http://img.shields.io/gem/v/nokogiri-xmlsec1.svg?style=flat-square)](http://rubygems.org/gems/rnfse)
-[![Dependency Status](http://img.shields.io/gemnasium/aitherios/nokogiri-xmlsec1.svg?style=flat-square)](https://gemnasium.com/aitherios/rnfse)
-[![Build Status](http://img.shields.io/travis/aitherios/nokogiri-xmlsec1.svg?style=flat-square)](https://travis-ci.org/aitherios/rnfse)
+[![Gem Version](http://img.shields.io/gem/v/nokogiri-xmlsec1.svg?style=flat-square)](http://rubygems.org/gems/nokogiri-xmlsec1)
+[![Dependency Status](http://img.shields.io/gemnasium/aitherios/nokogiri-xmlsec1.svg?style=flat-square)](https://gemnasium.com/aitherios/nokogiri-xmlsec1)
+[![Build Status](http://img.shields.io/travis/aitherios/nokogiri-xmlsec1.svg?style=flat-square)](https://travis-ci.org/aitherios/nokogiri-xmlsec1)
 
 This is a fork of nokogiri-xmlsec. This fork uses mini_portile to improve code
 predictiveness and allow heroku deploys.
