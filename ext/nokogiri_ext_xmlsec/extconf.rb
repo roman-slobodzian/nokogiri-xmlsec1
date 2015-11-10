@@ -393,6 +393,9 @@ else
       "--disable-crypto-dl",
       "--disable-apps-crypto-dl"
     ]
+    if RbConfig::CONFIG['target_os'].to_s == 'darwin14'
+      recipe.configure_options += [ "--with-openssl=/usr/local/opt/openssl" ]
+    end
   end
 
   have_lzma = preserving_globals {
