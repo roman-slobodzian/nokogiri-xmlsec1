@@ -385,7 +385,8 @@ else
   end
 
   xmlsec1_recipe = process_recipe("xmlsec1", dependencies["xmlsec1"], static_p, cross_build_p) do |recipe|
-    recipe.files = ["http://www.aleksey.com/xmlsec/download/#{recipe.name}-#{recipe.version}.tar.gz"]
+    #recipe.files = ["https://www.aleksey.com/xmlsec/download/#{recipe.name}-#{recipe.version}.tar.gz"]
+    recipe.files = ["http://download.openpkg.org/components/cache/xmlsec/#{recipe.name}-#{recipe.version}.tar.gz"]
     recipe.configure_options += [
       "--with-libxml=#{libxml2_recipe.path}",
       "--with-libxslt=#{libxslt_recipe.path}",
@@ -449,7 +450,7 @@ else
       end
     }.shelljoin
   end
-    
+
 end
 
 {

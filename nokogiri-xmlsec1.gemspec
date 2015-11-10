@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Wrapper around http://www.aleksey.com/xmlsec to
     support XML encryption, decryption, signing and signature validation in
     Ruby}
-  spec.description   = %q{This is a fork of nokogiri-xmlsec. 
+  spec.description   = %q{This is a fork of nokogiri-xmlsec.
     This fork uses mini_portile to improve code predictiveness and allow heroku deploys.
     This gem adds support to Ruby for encrypting, decrypting, signing and validating
     the signatures of XML documents, according to the [XML Encryption Syntax and
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 1.9.3'
 
   spec.license       = 'MIT'
-  
+
   spec.author        = 'Renan Mendes Carvalho'
   spec.email         = ['aitherios@gmail.com']
   spec.homepage      = 'https://github.com/aitherios/nokogiri-xmlsec1'
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'nokogiri',                  '~> 1.0'
   spec.add_dependency 'mini_portile',              '~> 0.6.0'
-  
+
   spec.add_development_dependency 'bundler',       '~> 1.3'
   spec.add_development_dependency 'rake',          '~> 10.0'
   spec.add_development_dependency 'rake-compiler', '~> 0.9'
@@ -42,5 +42,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard-rspec',   '~> 4.5'
   spec.add_development_dependency 'guard-rake',    '~> 1.0'
   spec.add_development_dependency 'wwtd',          '~> 0.7'
-  
+  spec.add_development_dependency 'pry',           '~> 0.10'
+
 end
